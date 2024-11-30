@@ -1,1 +1,1 @@
-console.log(`I'm editing my files`);
+console.log(`New Hello Git with changes`);
