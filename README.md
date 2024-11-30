@@ -25,3 +25,7 @@ El comando `git merge` se utiliza para **combinar los cambios de una rama en otr
 # Uso de `git stash`
 
 El comando `git stash` en Git permite guardar temporalmente los cambios no confirmados del directorio de trabajo, tanto los **staged** como los **unstaged**, y restablecer el directorio para que coincida con el último commit. Esto es útil cuando necesitas cambiar de rama o realizar otra tarea sin perder tus avances. Puedes listar los stashes con `git stash list`, aplicarlos con `git stash apply`, o recuperarlos y eliminarlos simultáneamente con `git stash pop`.
+
+## Uso de `git remote`
+
+El comando `git remote` permite gestionar los repositorios remotos asociados a tu repositorio local en Git. Los remotos son URLs que apuntan a repositorios alojados en plataformas como GitHub, GitLab o Bitbucket, y facilitan la sincronización de cambios entre tu repositorio local y el remoto. Puedes listar los remotos con `git remote -v`, agregar uno nuevo con `git remote add <nombre> <url>`, renombrar con `git remote rename <nombre-antiguo> <nombre-nuevo>`, eliminar con `git remote remove <nombre>`, y ver detalles con `git remote show <nombre>`.
