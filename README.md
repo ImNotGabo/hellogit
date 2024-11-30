@@ -9,3 +9,11 @@ El comando `git reset --hard` se utiliza para deshacer commits y restaurar el es
 # Uso de `git tag`
 
 El comando `git tag` se utiliza para crear referencias específicas a un punto en la historia de un repositorio, comúnmente para marcar versiones o lanzamientos importantes del proyecto. Existen dos tipos de etiquetas: las ligeras, que actúan como un marcador simple a un commit, y las anotadas, que almacenan metadatos adicionales como el nombre del autor, la fecha y un mensaje descriptivo. Las etiquetas no se envían automáticamente al repositorio remoto, por lo que es necesario usar `git push origin <nombre_etiqueta>` o `git push origin --tags` para publicarlas. Esto facilita la gestión de versiones y permite identificar rápidamente hitos importantes en el desarrollo.
+
+# Uso de `git branch`
+
+El comando `git branch` se utiliza para gestionar ramas en Git, permitiendo crear, listar, cambiar, renombrar y eliminar ramas en un repositorio. Para listar las ramas locales, se usa `git branch`, mientras que `git branch -a` muestra tanto las ramas locales como remotas. Para crear una nueva rama sin cambiar a ella, se emplea `git branch <nombre-rama>`, y para crearla y cambiar a ella simultáneamente, se utiliza `git switch -c <nombre-rama>`. Además, puedes renombrar una rama con `git branch -m <nuevo-nombre>` o eliminarla con `git branch -d <nombre-rama>`. Este comando es esencial para trabajar con múltiples flujos de trabajo y colaborar eficientemente en proyectos.
+
+# Uso de `git switch`
+
+El comando `git switch` se utiliza para cambiar entre ramas en un repositorio de Git de forma rápida y sencilla. Puedes cambiar a una rama existente con `git switch <nombre_rama>`, o crear y cambiar a una nueva rama con `git switch -c <nombre_nueva_rama>`. Este comando es una alternativa más clara y específica a `git checkout` cuando se trabaja exclusivamente con ramas, mejorando la legibilidad y evitando confusiones. Además, puedes forzar el cambio de rama descartando cambios locales no guardados con `git switch -f <nombre_rama>`.
