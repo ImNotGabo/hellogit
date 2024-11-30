@@ -1,0 +1,3 @@
+# Uso de `git reset --hard`
+
+El comando `git reset --hard` se utiliza para deshacer commits y restaurar el estado del repositorio a un punto anterior, eliminando tanto los cambios en el historial como en el área de trabajo y el staging. Es especialmente útil para descartar modificaciones de manera permanente, pero debe usarse con precaución ya que los cambios eliminados no se pueden recuperar fácilmente. Si necesitas deshacer un `reset --hard`, puedes utilizar `git reflog` para encontrar el commit perdido y restaurarlo. Este comando es ideal para situaciones donde quieres revertir por completo el estado de tu proyecto a un commit específico.
