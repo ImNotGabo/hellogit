@@ -17,3 +17,7 @@ El comando `git branch` se utiliza para gestionar ramas en Git, permitiendo crea
 # Uso de `git switch`
 
 El comando `git switch` se utiliza para cambiar entre ramas en un repositorio de Git de forma rápida y sencilla. Puedes cambiar a una rama existente con `git switch <nombre_rama>`, o crear y cambiar a una nueva rama con `git switch -c <nombre_nueva_rama>`. Este comando es una alternativa más clara y específica a `git checkout` cuando se trabaja exclusivamente con ramas, mejorando la legibilidad y evitando confusiones. Además, puedes forzar el cambio de rama descartando cambios locales no guardados con `git switch -f <nombre_rama>`.
+
+## Uso de `git merge`
+
+El comando `git merge` se utiliza para **combinar los cambios de una rama en otra**, integrando las diferencias en la rama actual. Si las ramas tienen una línea de desarrollo común, Git puede realizar un **merge fast-forward**, avanzando el puntero de la rama principal al último commit de la rama fusionada. Sin embargo, si ambas ramas han divergido, Git realizará una **fusión de tres vías**, creando un commit de merge para unir los historiales de ambas ramas.
