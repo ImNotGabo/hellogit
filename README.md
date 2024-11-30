@@ -29,3 +29,11 @@ El comando `git stash` en Git permite guardar temporalmente los cambios no confi
 ## Uso de `git remote`
 
 El comando `git remote` permite gestionar los repositorios remotos asociados a tu repositorio local en Git. Los remotos son URLs que apuntan a repositorios alojados en plataformas como GitHub, GitLab o Bitbucket, y facilitan la sincronización de cambios entre tu repositorio local y el remoto. Puedes listar los remotos con `git remote -v`, agregar uno nuevo con `git remote add <nombre> <url>`, renombrar con `git remote rename <nombre-antiguo> <nombre-nuevo>`, eliminar con `git remote remove <nombre>`, y ver detalles con `git remote show <nombre>`.
+
+## Uso de `git fetch`
+
+El comando `git fetch` permite actualizar el repositorio local con los cambios más recientes del repositorio remoto, sin afectar el estado actual del directorio de trabajo. Es útil para revisar las actualizaciones antes de integrarlas, ya que descarga nuevas ramas, etiquetas y actualizaciones de las ramas remotas sin realizar automáticamente una fusión con la rama actual.
+
+# Uso de `git pull`
+
+El comando `git pull` actualiza el repositorio local con los cambios más recientes desde el repositorio remoto. Combina dos comandos: `git fetch`, que descarga los nuevos cambios, y `git merge`, que integra esos cambios en la rama actual. Su uso más común es `git pull origin <rama>`, donde `<rama>` es la rama desde la que deseas obtener las actualizaciones, como `main` o `develop`. También se puede usar la opción `--rebase` para aplicar los cambios remotos sin crear un nuevo commit de merge.
