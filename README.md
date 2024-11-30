@@ -51,3 +51,7 @@ Por ejemplo, para clonar un repositorio público utilizando HTTPS:
 ```bash
 git clone https://github.com/username/repository.git
 ```
+
+### `git push`
+
+El comando `git push` se utiliza para subir los cambios locales de un repositorio a un repositorio remoto, sincronizando así ambas versiones. Este comando envía las confirmaciones (`commits`) de una rama específica al servidor remoto, permitiendo que otros colaboradores puedan acceder a las actualizaciones. Es necesario haber realizado previamente un `git add` para agregar los cambios al área de preparación (staging) y un `git commit` para confirmar dichos cambios con un mensaje descriptivo. La sintaxis básica es `git push origin <nombre-rama>`, donde `<nombre-rama>` es la rama que deseas actualizar.
