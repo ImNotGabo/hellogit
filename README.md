@@ -21,3 +21,7 @@ El comando `git switch` se utiliza para cambiar entre ramas en un repositorio de
 ## Uso de `git merge`
 
 El comando `git merge` se utiliza para **combinar los cambios de una rama en otra**, integrando las diferencias en la rama actual. Si las ramas tienen una línea de desarrollo común, Git puede realizar un **merge fast-forward**, avanzando el puntero de la rama principal al último commit de la rama fusionada. Sin embargo, si ambas ramas han divergido, Git realizará una **fusión de tres vías**, creando un commit de merge para unir los historiales de ambas ramas.
+
+# Uso de `git stash`
+
+El comando `git stash` en Git permite guardar temporalmente los cambios no confirmados del directorio de trabajo, tanto los **staged** como los **unstaged**, y restablecer el directorio para que coincida con el último commit. Esto es útil cuando necesitas cambiar de rama o realizar otra tarea sin perder tus avances. Puedes listar los stashes con `git stash list`, aplicarlos con `git stash apply`, o recuperarlos y eliminarlos simultáneamente con `git stash pop`.
