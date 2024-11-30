@@ -37,3 +37,21 @@ El comando `git fetch` permite actualizar el repositorio local con los cambios m
 # Uso de `git pull`
 
 El comando `git pull` actualiza el repositorio local con los cambios más recientes desde el repositorio remoto. Combina dos comandos: `git fetch`, que descarga los nuevos cambios, y `git merge`, que integra esos cambios en la rama actual. Su uso más común es `git pull origin <rama>`, donde `<rama>` es la rama desde la que deseas obtener las actualizaciones, como `main` o `develop`. También se puede usar la opción `--rebase` para aplicar los cambios remotos sin crear un nuevo commit de merge.
+
+Aquí tienes un README breve y claro sobre el uso de `git clone`:
+
+---
+
+# Uso de `git clone`
+
+El comando `git clone` se utiliza para crear una copia local de un repositorio remoto de Git. Este comando descarga todos los archivos, el historial de commits y las ramas del repositorio remoto en tu máquina local. La sintaxis básica es:
+
+```bash
+git clone <repository-url>
+```
+
+Por ejemplo, para clonar un repositorio público utilizando HTTPS:
+
+```bash
+git clone https://github.com/username/repository.git
+```
