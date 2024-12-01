@@ -4,6 +4,10 @@
 
 El comando `git checkout` se utiliza para cambiar entre ramas en un repositorio de Git, o para restaurar archivos en el área de trabajo. Al ejecutar `git checkout <nombre_rama>`, se cambia a la rama especificada, actualizando el área de trabajo con el contenido de esa rama. También puede utilizarse para hacer un "checkout" de un commit específico o de una etiqueta, creando un estado de "detached HEAD". En este caso, si se desea hacer modificaciones, se debe crear una nueva rama a partir de ese commit o etiqueta con el comando `git checkout -b <nueva_rama>`. Este comando es esencial para navegar entre diferentes versiones de un proyecto y realizar cambios sin afectar la rama principal.
 
+## Uso de `git rebase`
+
+`git rebase` es un comando que permite reescribir el historial de commits al aplicar una rama sobre otra, manteniendo una historia más limpia y lineal. Es útil para actualizar ramas de características (`feature branches`) con los últimos cambios de la rama principal sin generar commits de fusión innecesarios. Aunque es una poderosa herramienta, se debe evitar en ramas compartidas públicamente, ya que modifica el historial y podría generar conflictos para otros desarrolladores.
+
 ## Uso de `git reset --hard`
 
 El comando `git reset --hard` se utiliza para deshacer commits y restaurar el estado del repositorio a un punto anterior, eliminando tanto los cambios en el historial como en el área de trabajo y el staging. Es especialmente útil para descartar modificaciones de manera permanente, pero debe usarse con precaución ya que los cambios eliminados no se pueden recuperar fácilmente. Si necesitas deshacer un `reset --hard`, puedes utilizar `git reflog` para encontrar el commit perdido y restaurarlo. Este comando es ideal para situaciones donde quieres revertir por completo el estado de tu proyecto a un commit específico.
@@ -58,6 +62,20 @@ git clone https://github.com/username/repository.git
 
 El comando `git push` se utiliza para subir los cambios locales de un repositorio a un repositorio remoto, sincronizando así ambas versiones. Este comando envía las confirmaciones (`commits`) de una rama específica al servidor remoto, permitiendo que otros colaboradores puedan acceder a las actualizaciones. Es necesario haber realizado previamente un `git add` para agregar los cambios al área de preparación (staging) y un `git commit` para confirmar dichos cambios con un mensaje descriptivo. La sintaxis básica es `git push origin <nombre-rama>`, donde `<nombre-rama>` es la rama que deseas actualizar.
 
+## Uso de `git cherry-pick`
+
+El comando `git cherry-pick` permite aplicar los cambios de un commit específico a la rama actual. Es útil cuando necesitas traer una funcionalidad o corrección de otra rama sin realizar una fusión completa. Para utilizarlo, debes proporcionar el hash del commit que deseas aplicar con el siguiente comando:
+
+```bash
+git cherry-pick <commit-hash>
+```
+
+Si encuentras conflictos durante el proceso, debes resolverlos, agregar los archivos corregidos y continuar con:
+
+```bash
+git cherry-pick --continue
+```
+
 ---
 
 # GitHub
@@ -65,3 +83,7 @@ El comando `git push` se utiliza para subir los cambios locales de un repositori
 ## Uso de Git Fork
 
 **Git fork** es una copia de un repositorio que se almacena en tu cuenta de GitHub, permitiéndote experimentar con cambios libremente sin afectar el proyecto original. Es ideal para proponer mejoras o usar un proyecto existente como base para tus propios desarrollos.
+
+# Uso de Pull Requests (PR)
+
+Los **Pull Requests (PR)** son una herramienta esencial para colaborar en proyectos de desarrollo. Permiten proponer cambios en una rama específica de un repositorio y solicitar una revisión antes de fusionarlos con la rama principal. Este proceso fomenta la revisión de código, mejora la calidad del proyecto y facilita la discusión entre colaboradores antes de aceptar los cambios. Para crear un PR, debes desarrollar tus cambios en una rama independiente, enviarla al repositorio remoto y luego abrir el PR desde la plataforma de control de versiones como GitHub, GitLab o Bitbucket.
